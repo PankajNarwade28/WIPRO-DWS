@@ -1,0 +1,33 @@
+Repackager 
+
+Lab: 
+Install exe, install one msi file s
+
+Run Invoke-AppDeployToolkit.ps1 
+via PowerShell: %SystemRoot%\System32\WindowsPowerShell\v1.0\PowerShell.exe -ExecutionPolicy Bypass -NoProfile -File Invoke-AppDeployToolkit.ps1
+
+ 
+Parameter	       Values	       Description
+-DeploymentType | Install(default), Uninstall ,Repair |Specifies the deployment type.
+
+-DeployMode	|Interactive(default),Silent, Noninteractive| Controls dialog display behavior. NonInteractive allows progress dialogs but suppresses any UI elements requiring interaction.
+
+-SuppressRebootPassThru	 |	|Suppresses return of 3010 'Reboot Required' exit codes and returns 0 instead.
+
+-TerminalServerMode|	 	|Changes to user install mode for RDS/Citrix servers.
+
+-DisableLogging	| 	|Disables logging to file.
+ 
+ 
+ 
+
+Invoke-AppDeployToolkit.exe -DeploymentType Install -DeployMode Interactive
+
+Invoke-AppDeployToolkit.exe -DeploymentType Install -DeployMode Silent -SuppressRebootPassThru
+
+Invoke-AppDeployToolkit.ps1 -DeploymentType Uninstall -DeployMode Noninteractive
+
+Invoke-AppDeployToolkit.exe /Core -DeploymentType Install -DeployMode Silent
+
+https://psappdeploytoolkit.com/
+ 
